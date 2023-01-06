@@ -1,0 +1,21 @@
+body {
+  background-image: url(../src/assets/andromeda-galaxy-m31-2021-08-26-17-00-34-utc.jpg);
+}
+
+.title {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  align-content: center;
+
+  text-align: center;
+  font-size: 4rem;
+}
+
+.inputSearch {
+  width: 50vw;
+}
+
+
+.container {
+  width: 70vw;
+  height: 50vh;
+}
