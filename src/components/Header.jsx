@@ -3,8 +3,8 @@
 const Header = () =>{
 
     return(
-        <div className="bg-light px-5 py-5 text-dark">
-            <h1 className="title">Star Wars</h1>
+        <div className="bg-dark px-1 py-1  my-3 text-warning">
+            <h1 className="title bg-">Star Wars</h1>
         </div>
     )
 }

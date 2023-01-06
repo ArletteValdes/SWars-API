@@ -14,10 +14,12 @@ const SwApp=()=>{
   //Llamado API general
 
   const SwAppRequest = async () => {
-    const response = await fetch("api.json");
+    const response = await fetch('https://swapi.dev/api/people');
     //espero promesa sea resuelta
     const data = await response.json();
     setInfo(data.results)
+
+    console.log(data.results)
  
   };
 
@@ -29,23 +31,23 @@ const SwApp=()=>{
 
 
     //Placeholder filtro
-const filteredResults = info.filter((results)=> results.name.includes(search))
+const filteredInfo= info.filter((item)=> item.name.toLowerCase().includes(search.toLowerCase()))
 
-// console.log(info)
+
 
   return (
   
 
-<>
-            <Header />
-            <SearchText setSearch={setSearch} />
-             {/* <section 
-              className="d-flex flex-wrap"/> */}
-              
-            {filteredResults.map((results) => <SwCard key={results.name} />)} 
-            
-            
-        </>
+    <>
+   <Header/>
+<SearchText setSearch={setSearch}/>
+
+
+   
+      {filteredInfo.map((item)=><SwCard key={item.name} itemUrl={item.url}/>)}
+    </>
+
+   
   
   )
 };
